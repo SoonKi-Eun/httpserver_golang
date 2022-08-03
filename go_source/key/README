@@ -1,0 +1,32 @@
+#ref https://blusky10.tistory.com/352
+
+1. private key gen
+#openssl genrsa -out server.key 2048
+
+2. public key gen
+#openssl rsa -in server.key -pubout -out public_server.key
+
+3. csr gen , cirtificate sining request
+#openssl req -new -key server.key -out server.csr
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:KR
+State or Province Name (full name) [Some-State]:Seoul
+Locality Name (eg, city) []:Seoul
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:local
+Organizational Unit Name (eg, section) []:local
+Common Name (e.g. server FQDN or YOUR name) []:local
+Email Address []:esk1223@kbell.co.kr
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:kbell1234!@#$
+An optional company name []:kbell
+
+4. crt gen
+openssl req -x509 -days 365 -key server.key -in server.csr -out server.crt -days 365

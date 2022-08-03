@@ -1,0 +1,10 @@
+project_info :
+  max_cpu: 2
+  project_name: system_controller
+  project_path: /home/esk1223/SDWAN/system_controller_golang/go_source
+httpserver_info:
+  port: 18001
+  timeout: 10
+  ssl_active: false
+  private_key_path: /home/esk1223/SDWAN/system_controller_golang/go_source/key/server.key
+  crt_certificate_path: /home/esk1223/SDWAN/system_controller_golang/go_source/key/server.crt
