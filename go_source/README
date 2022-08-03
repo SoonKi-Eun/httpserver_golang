@@ -3,11 +3,10 @@
  - Go version  : go version go1.17.5 linux/amd64
  - Env Info    : (ref :: esk-dev-env 기준 환경셋업 , Ubuntu 20.04 LTS)
    $vi ~/.profile
-   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/esk1223/env_default_pkg/go/pkg/go-1.17.5-linux-amd64/bin/
     #export PATH=$PATH:/home/esk1223/env_default_pkg/go/pkg/go-1.17.5-linux-amd64/bin/
     export GOROOT=/home/esk1223/env_default_pkg/go/pkg/go-1.17.5-linux-amd64
     export GOPATH=/home/esk1223/env_default_pkg/go/pkg/go_path
-    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
  - SVN Info    :
    $ svn export -r 81 svn://192.168.1.108/SDWAN/system_controller_golang
